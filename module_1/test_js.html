@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Console</title>
+
+    <!-- Hides the h1 title, so that it is only displayed through the JS script. Hidden elements do not effect JS as the objects DO exist without being displayed. -->
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- This h1 element will be used in several ways below. -->
+    <h1 id="title" class="hidden">Unique HTML Title</h1>
+    <p id="text" class="hidden">Today is </p>
+
+    <!-- Scripts should run at the end of the document before the closing body tag. In this example document.querySelector('h1') would not find the h1 text if it was placed before the h1 element. -->
+    <script>
+
+        // Creates a constant variable h1 that pulls the h1 element with the ID "title" with innerText being used to pull the string instead of the object itself.
+        const h1 = document.getElementById('title').innerText;
+        const text = document.getElementById('text').innerText;
+        const date = Date();
+        const allTogether = h1 + text + date + ' allTogether';
+
+        // Writes the h1 variable (above) to the screen, appending "in js!" to confirm the variable is being selected properly.
+        document.write('<h1>' + h1 + ', in JS!</h1>');
+
+        // Writes a String to the console, using built in Date() fn.
+        console.log('Today is ' + Date());
+
+        // Wristes to the screen, using built in Date() fn.
+        document.write('<p>Today is ' + Date() + ' using text and JS\'s Date() fn.</p>');
+
+        // Writes to the screen, using variables for the String and the date.
+        document.write('<p>' + text + date + ' using variables.</p>');
+
+        // Shows how you can use variables inside of another variable. The allTogether variable uses h1, text, and date variables before printing to the console.
+        console.log(allTogether);
+
+    </script>
+
+    <!--
+    Uses external src file to render JS. Will say "this is a separate file" in console. File should be a relative path ~/directory/path/to/file.js
+
+        ./file.js = file is in the same folder (sibling)
+        ../file.js = go up one directory
+
+        ~/directory/file.js = absolute path DOES NOT WORK
+
+    This file uses the h1 variable from this file, therefore this script must run after the variable is created.
+    -->
+    <script src="./test_js2.js"></script>
+
+</body>
+
+</html>

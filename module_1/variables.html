@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variables</title>
+</head>
+
+<body>
+  <script>
+    // Forces you to declare variables before setting them.
+    // 'use strict';
+
+    // Three different ways to create variables.
+
+    // FUNCTION SCOPE VARIABLES (var)
+    var first = 'Justin'; // semi-colon terminates a statement
+
+    // BLOCK SCOPE VARIABLES (let & const)
+    // Change this variable to see the code block evaluate your age.
+    let age = 20;
+
+    const cool = true;
+
+    // Will not work as const variables can not be changed. Uncomment to test.
+    // cool = false
+
+    // You can reset a var or let variable by using the variable name, you do not (and should not) use var, let, or const to change the variable.
+    first = 'jay';
+
+    // Variable must start with a letter a-z. Exception for $ and _
+    const abc = 'Alpha';
+    const $abc = 'Dollar Sign';
+    const _abc = 'Underscore';
+    // const 1abc = 'Broken';
+
+    // camelCase
+    const camelCase = true;
+
+    // UppderCamelCase
+    const UpperCamelCase = true;
+
+    // snake_case
+    const snake_case = true;
+
+    // kabob-case, dash is NOT allowed
+    // const kabob-case = false;
+
+    // 'use strict' requires variables to be declared with var, let, or const. Best practice!
+
+    // Test this by commenting out line 11 'use strict'; and uncommenting the next line.
+    // badPractice = true;
+
+    // Called a code block. Code blocks do not require a semi-colon, the statements inside a code block however WILL use semi-colons.
+    if (age > 25) {
+      document.write('You sir, are OLD!');
+    } else {
+      document.write('Enjoy your youth, it won\'t last forever.');
+    }
+
+  </script>
+</body>
+
+</html>
