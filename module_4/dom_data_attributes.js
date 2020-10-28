@@ -13,8 +13,12 @@ window.addEventListener('load', function () {
   console.log(pic.naturalWidth);
 });
 
+/* Getter's and Setter's */
 // pic.naturalWidth = 500; // getter, can not be set
 // pic.width = 500; // setter, works.
+console.log(pic.getAttribute('alt'));
+pic.setAttribute('alt', 'Changed alt tag');
+console.log(pic.getAttribute('alt'));
 
 // Displays message to the console when submit button is pressed.
 const submit = document.querySelector('form');
