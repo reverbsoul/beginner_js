@@ -8,6 +8,8 @@ function formAccept(e) {
   if (!e.currentTarget.agree.checked) {
     console.log('please agree');
   } else {
+    console.log(e.currentTarget.name.value);
+    console.log(e.currentTarget.email.value);
     console.log('thanks');
   }
 }
